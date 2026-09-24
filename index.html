@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>天津3天2夜 · 闺蜜逛吃路线小程序</title>
+  <style>
+    :root{--pink:#ff5f9f;--blue:#35a7ff;--green:#35c978;--ink:#241d2f;--muted:#665c72;--paper:#eff9fc;--cream:#fff6c9;--line:#e6edf2}
+    *{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#fff1f8,#ecf9ff);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",Arial,sans-serif}.app{width:min(1440px,100vw);margin:auto;padding:16px}.title{margin:0 auto 14px;width:min(1080px,100%);padding:18px 24px;border:5px solid #fff;border-radius:24px;background:linear-gradient(135deg,#ff7ab7,#ff4b92);box-shadow:0 16px 42px rgba(65,33,61,.22);color:#fff;text-align:center;font-size:clamp(28px,4vw,52px);font-weight:900;text-shadow:0 4px 0 rgba(145,30,88,.48)}.layout{display:grid;grid-template-columns:minmax(680px,1fr) 390px;gap:14px}.card{border:3px solid #fff;border-radius:24px;background:rgba(255,255,255,.78);box-shadow:0 16px 34px rgba(42,34,54,.14);overflow:hidden}.map-card{background:var(--paper)}svg{display:block;width:100%;height:auto}.controls{display:flex;flex-wrap:wrap;gap:8px;padding:12px 14px;border-bottom:1px solid var(--line);align-items:center}.controls button,.print{border:0;border-radius:999px;padding:9px 13px;background:#fff;color:var(--ink);font-weight:900;cursor:pointer;box-shadow:0 4px 12px rgba(36,29,47,.13)}.controls button.active{color:#fff}.controls button[data-day=day1].active{background:var(--pink)}.controls button[data-day=day2].active{background:var(--blue)}.controls button[data-day=day3].active{background:var(--green)}.print{margin-left:auto;background:var(--ink);color:#fff}.side{display:flex;flex-direction:column;gap:14px}.panel{padding:14px}.panel h2{margin:0 0 10px;font-size:20px}.hint{margin:0 0 10px;color:var(--muted);font-weight:700;font-size:13px;line-height:1.45}.timeline{display:grid;gap:8px;max-height:690px;overflow:auto;padding-right:4px}.item{display:grid;grid-template-columns:58px 1fr;gap:8px;padding:10px;border:1px solid var(--line);border-radius:14px;background:#fff}.item strong{display:block;margin-bottom:3px}.item p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}.time{font-weight:900;color:var(--ink)}.tag{display:inline-block;margin-top:5px;padding:3px 7px;border-radius:999px;background:#fff0f6;color:#c93278;font-size:12px;font-weight:900}.checklist{display:grid;gap:7px}.checklist label{display:flex;gap:8px;align-items:flex-start;padding:8px;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:13px;line-height:1.35}.route-base{fill:none;stroke:#fff;stroke-width:16;stroke-linecap:round;stroke-linejoin:round}.route{fill:none;stroke-width:7;stroke-dasharray:16 14;stroke-linecap:round;stroke-linejoin:round;filter:url(#shadow);transition:opacity .2s}.day1{stroke:var(--pink)}.day2{stroke:var(--blue)}.day3{stroke:var(--green)}.dim{opacity:.16}.pin{cursor:help;transition:opacity .2s}.pin-shape{fill:var(--cream);stroke:var(--ink);stroke-width:3}.pin-dot{fill:#fff;stroke:var(--ink);stroke-width:2}.node-label{fill:#ffe2ef;stroke:var(--ink);stroke-width:2;rx:12;filter:url(#labelShadow)}.pin.food .node-label{fill:#ffe2ef}.pin.photo .node-label{fill:#d9f8e6}.pin.end .node-label{fill:#c9edff}.pin.start .node-label{fill:#ffe66d}.pin text{fill:var(--ink);font-size:16px;font-weight:900;text-anchor:middle;dominant-baseline:middle}.note rect{fill:rgba(36,29,47,.9);stroke:#fff;stroke-width:2;rx:9;filter:url(#labelShadow)}.note text{fill:#fff;font-size:14px;font-weight:900;text-anchor:middle;dominant-baseline:middle}.day-title text{fill:#fff;font-size:40px;font-weight:900;text-anchor:middle;paint-order:stroke;stroke:var(--ink);stroke-width:6;stroke-linejoin:round}.day-title rect{stroke:#fff;stroke-width:4;rx:18;filter:url(#shadow)}.bg-road{fill:none;stroke:#efd77d;stroke-width:9;stroke-linecap:round;opacity:.55}.bg-water{fill:none;stroke:#b8ecf8;stroke-width:34;stroke-linecap:round;opacity:.85}.zone{fill:rgba(255,255,255,.42);stroke:#fff;stroke-width:3}.tooltip{position:fixed;z-index:20;max-width:330px;padding:10px 12px;border-radius:12px;background:rgba(36,29,47,.94);color:#fff;font-size:14px;font-weight:750;line-height:1.45;pointer-events:none;opacity:0;transform:translate(-50%,calc(-100% - 14px));box-shadow:0 12px 26px rgba(25,20,34,.26)}@media(max-width:1100px){.layout{grid-template-columns:1fr}.side{grid-template-columns:1fr 1fr;display:grid}.timeline{max-height:none}}@media(max-width:760px){.app{padding:10px}.map-card{overflow-x:auto}svg{min-width:1120px}.side{display:flex}.print{margin-left:0;width:100%}}@media print{.controls,.side{display:none}.layout{display:block}.app{padding:0}.card{border:0;box-shadow:none}}
+    .controls button[data-day=all].active{background:var(--ink)}
+  </style>
+</head>
+<body>
+<main class="app">
+  <h1 class="title">天津3天2夜 · 人生首次合体出游路线图</h1>
+  <section class="layout">
+    <div class="card map-card">
+      <div class="controls">
+        <button data-day="all" class="active">全部路线</button>
+        <button data-day="day1">Day 1</button>
+        <button data-day="day2">Day 2</button>
+        <button data-day="day3">Day 3</button>
+        <button id="nextStop">下一站</button>
+        <button class="print" id="printBtn">打印 / 另存为 PDF</button>
+      </div>
+      <svg id="svg" viewBox="0 0 1600 2200" role="img" aria-label="天津三天两夜逛吃路线图">
+        <defs><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#33253a" flood-opacity=".22"/></filter><filter id="labelShadow" x="-40%" y="-50%" width="180%" height="200%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#2c2235" flood-opacity=".23"/></filter></defs>
+        <rect width="1600" height="2200" fill="#eff9fc"/>
+        <path class="bg-water" d="M1240 70 C1120 330 1260 560 1000 760 C730 968 780 1280 560 1510 C350 1728 475 2020 780 2110"/>
+        <path class="bg-road" d="M80 225 C430 260 820 250 1520 190"/><path class="bg-road" d="M60 700 C480 650 1010 660 1540 720"/><path class="bg-road" d="M80 1180 C420 1120 1000 1160 1530 1300"/><path class="bg-road" d="M120 1740 C520 1620 1050 1650 1500 1860"/><path class="bg-road" d="M330 80 C380 520 285 1020 350 1530 C390 1830 360 2040 300 2150"/><path class="bg-road" d="M790 80 C835 530 740 960 790 1460 C835 1800 805 2000 760 2150"/><path class="bg-road" d="M1270 90 C1215 580 1310 1040 1280 1530 C1260 1830 1370 2010 1480 2140"/>
+        <rect class="zone" x="55" y="95" width="1490" height="585" rx="34"/><rect class="zone" x="55" y="795" width="1490" height="560" rx="34"/><rect class="zone" x="55" y="1470" width="1490" height="560" rx="34"/>
+        <g id="routes"></g><g id="notes"></g><g id="pins"></g><g id="titles"></g>
+      </svg>
+      <div class="tooltip" id="tooltip" role="tooltip"></div>
+    </div>
+    <aside class="side">
+      <div class="card panel">
+        <h2 id="panelTitle">全部行程</h2>
+        <p class="hint" id="panelHint">点击上方 Day 按钮可只看某一天；点击“下一站”会按完整行程依次高亮。</p>
+        <div class="timeline" id="timeline"></div>
+      </div>
+      <div class="card panel">
+        <h2>出发前清单</h2>
+        <p class="hint">勾选会保存在当前浏览器里，离线也能用。</p>
+        <div class="checklist" id="checklist"></div>
+      </div>
+    </aside>
+  </section>
+</main>
+<script>
+const NS="http://www.w3.org/2000/svg";
+const days=[
+{id:"day1",name:"Day 1",color:"var(--pink)",title:["DAY-01",190,150],hint:"10月3日：海河沿岸、和平区、游船夜景。",nodes:[
+["06:14","天津站",130,260,"start","抵达天津站，打车约9公里20分钟到酒店寄存行李。"],["07:00","南苑e家",315,260,"end","南苑e家（天津西站人民医院店），先寄存行李再轻装出门。"],["09:30","西北角站",500,260,"photo","从酒店步行至西北角站，乘1号线约15分钟到营口道。"],["10:00","营口道站",685,260,"photo","和平区步行线起点。"],["10:10","西开大教堂",870,260,"photo","拍照点，尊重宗教场所秩序。"],["10:35","滨江道",1055,260,"photo","商业街边走边逛。"],["10:55","瓷房子",1240,260,"photo","外观拍照，人多时注意排队。"],["11:10","张学良故居",1425,260,"photo","建议提前确认开放时段。"],["11:25","劝业场",1425,500,"photo","和平路地标。"],["11:30","同庆德",1240,500,"food","同庆德·天津菜，山楂排骨、老爆三、醋溜木须，不点八珍豆腐。"],["13:30","五大道",1055,500,"photo","五大道适合骑行和拍照。"],["14:00","民园广场",870,500,"photo","五大道核心拍照点。"],["14:30","疙瘩楼",685,500,"photo","特色建筑顺路打卡。"],["15:30","泰安道",500,500,"photo","英伦风街道。"],["16:00","安里甘教堂",315,500,"photo","泰安道附近外观拍照。"],["17:00","锅大婶",130,500,"food","八珍豆腐留给这里吃，17:30前到或电话问号。"],["19:30","天津站码头",130,620,"end","海河游船19:30场，需提前预约；返程建议打车或天津站2号线换1号线。"]],notes:["打车9公里/20分钟","步行900米/12分钟","地铁1号线15分钟","步行150米/2分钟","步行600米/8分钟","步行520米/7分钟","步行120米/2分钟","步行320米/5分钟","步行450米/7分钟","步行1.8公里/25分钟","步行250米/4分钟","步行260米/4分钟","步行1.5公里/22分钟","步行120米/2分钟","步行1.6公里/24分钟","打车3公里/15分钟"]},
+{id:"day2",name:"Day 2",color:"var(--blue)",title:["DAY-02",190,850],hint:"10月4日：红桥区早餐、老城、天津博物馆、金刚桥夜景。",nodes:[
+["07:00","南苑e家",130,980,"end","酒店出发。"],["07:10","西北角美食街",315,980,"food","锅巴菜、卷圈、面茶，7:00前到更稳。"],["08:00","洪湖里站",500,980,"food","1号线1站约3分钟，吃蒸饼、焖子。"],["08:20","欣乐糕点",685,980,"food","买京糕排。"],["08:30","西北角/酒店",870,980,"end","回酒店化妆整理，别把上午排太满。"],["10:00","鼓楼站",1055,980,"photo","西北角到西南角换2号线到鼓楼。"],["10:20","古文化街",1240,980,"photo","泥人张、杨柳青年画、耳朵眼炸糕、熟梨糕。"],["11:20","鼓楼",1425,980,"photo","老城商业区。"],["12:00","添万囍",1425,1215,"food","三鲜捞面，人均约40元。"],["13:30","天津博物馆",1055,1215,"photo","免费预约，16:00停止入场。"],["17:30","益发顺",685,1215,"food","茄盒、醋椒豆腐、鲜虾茄盒，17:30前到店。"],["19:00","金刚桥",315,1215,"photo","拍天津之眼，不坐摩天轮；返酒店建议打车或骑行到近站换乘。"]],notes:["打车/单车2公里/10分钟","地铁1号线3分钟","步行150米/2分钟","地铁1号线20分钟","地铁1转2号线/25分钟","步行1.3公里/18分钟","步行900米/13分钟","步行500米/7分钟","打车4公里/15分钟","打车5公里/20分钟","打车2.5公里/10分钟"]},
+{id:"day3",name:"Day 3",color:"var(--green)",title:["DAY-03",190,1525],hint:"10月5日：桥园里早点、西北角补甜品、伴手礼、返程。",nodes:[
+["07:30","南苑e家",130,1650,"end","退房寄存行李，轻装出门。"],["08:15","桥园里",315,1650,"food","大饼夹一切，不要吃太撑。"],["09:00","西北角",500,1650,"food","乘1号线约12分钟。"],["09:10","古香斋刨冰",685,1650,"food","前两天没吃到就补。"],["09:30","鼓楼商业街",870,1650,"food","买伴手礼。"],["10:00","南市食品街",1055,1650,"food","十八街麻花、蜜麻花、白皮点心。"],["10:30","昱德来",1240,1650,"food","牛窝骨、肘子；如果改在鼓楼吃，可选耳朵眼或马记富来。"],["11:30","南苑e家取行李",1425,1650,"end","回酒店取行李，检查充电器和证件。"],["12:30","天津西站",1425,1885,"end","打车约4公里10到15分钟，16:05乘G1711返程。"]],notes:["打车约9公里/25分钟","地铁1号线12分钟","步行至刨冰","步行1.4公里/20分钟","步行650米/9分钟","打车3公里/15分钟","打车返酒店取行李","打车4公里/15分钟"]}
+];
+const checklist=["海河游船预约10月3日19:30场","天津博物馆预约，确认16:00前入场","确认南苑e家清晨可寄存行李","开通支付宝或微信地铁乘车码","带身份证、充电宝、预约截图","准备防磨脚贴、肠胃药、消食片","衣服按天分装，伴手礼最后一天买"];
+const routes=document.getElementById("routes"),notes=document.getElementById("notes"),pins=document.getElementById("pins"),titles=document.getElementById("titles"),timeline=document.getElementById("timeline"),panelTitle=document.getElementById("panelTitle"),panelHint=document.getElementById("panelHint");
+function el(n,a={}){const e=document.createElementNS(NS,n);for(const[k,v]of Object.entries(a))e.setAttribute(k,v);return e}function txt(g,s,x,y,a={}){const t=el("text",{x,y,...a});t.textContent=s;g.appendChild(t);return t}function pathFor(nodes){return nodes.map((n,i)=>`${i?"L":"M"}${n[2]} ${n[3]}`).join(" ")}function labelW(s){return Math.max(82,Math.min(170,s.length*17+28))}
+function addNote(text,x,y,day){const parts=text.split("/"),g=el("g",{class:`note ${day}`,transform:`translate(${x} ${y})`}),w=Math.max(118,Math.max(...parts.map(p=>p.length))*16+26),h=parts.length>1?48:32;g.appendChild(el("rect",{x:-w/2,y:-h/2,width:w,height:h}));parts.forEach((p,i)=>txt(g,p,0,parts.length>1?-8+i*18:0));notes.appendChild(g)}
+function addPin(n,day){const[time,name,x,y,type,tip]=n,g=el("g",{class:`pin ${type} ${day}`,transform:`translate(${x} ${y})`,"data-tip":`${time} ${name}：${tip}`}),w=labelW(name);g.appendChild(el("title")).textContent=tip;g.appendChild(el("path",{class:"pin-shape",d:"M0,-22 C-13,-22 -24,-11 -24,2 C-24,20 0,38 0,38 C0,38 24,20 24,2 C24,-11 13,-22 0,-22Z"}));g.appendChild(el("circle",{class:"pin-dot",cx:0,cy:1,r:7}));g.appendChild(el("rect",{class:"node-label",x:-w/2,y:30,width:w,height:31}));txt(g,name,0,46);pins.appendChild(g)}
+function addSticker(day){const g=el("g",{class:`day-title ${day.id}`,transform:`translate(${day.title[1]} ${day.title[2]})`});g.appendChild(el("rect",{x:-95,y:-38,width:190,height:72,fill:day.color}));txt(g,day.title[0],0,12);titles.appendChild(g)}
+days.forEach(day=>{routes.appendChild(el("path",{class:`route-base ${day.id}`,d:pathFor(day.nodes)}));routes.appendChild(el("path",{class:`route ${day.id}`,d:pathFor(day.nodes)}));day.nodes.slice(0,-1).forEach((n,i)=>{const m=day.nodes[i+1];addNote(day.notes[i],(n[2]+m[2])/2,(n[3]+m[3])/2-38,day.id)});day.nodes.forEach(n=>addPin(n,day.id));addSticker(day)});
+function renderTimeline(dayId="all"){const selected=dayId==="all"?days:days.filter(d=>d.id===dayId);panelTitle.textContent=dayId==="all"?"全部行程":selected[0].name+" 行程";panelHint.textContent=dayId==="all"?"三天完整版路线，点击节点可看备注。":selected[0].hint;timeline.innerHTML="";selected.forEach(d=>d.nodes.forEach(n=>{const div=document.createElement("div");div.className="item";div.dataset.day=d.id;div.innerHTML=`<div class="time">${n[0]}</div><div><strong>${n[1]}</strong><p>${n[5]}</p><span class="tag">${d.name}</span></div>`;timeline.appendChild(div)}))}
+function filter(dayId){document.querySelectorAll(".controls button[data-day]").forEach(b=>b.classList.toggle("active",b.dataset.day===dayId));document.querySelectorAll(".route,.route-base,.pin,.note,.day-title").forEach(n=>{const show=dayId==="all"||n.classList.contains(dayId);n.classList.toggle("dim",!show)});renderTimeline(dayId)}
+document.querySelectorAll(".controls button[data-day]").forEach(b=>b.addEventListener("click",()=>filter(b.dataset.day)));
+let cursor=-1,flat=days.flatMap(d=>d.nodes.map(n=>({day:d.id,node:n})));document.getElementById("nextStop").addEventListener("click",()=>{cursor=(cursor+1)%flat.length;filter(flat[cursor].day);document.querySelectorAll(".pin").forEach(p=>p.style.filter="");const match=[...document.querySelectorAll(`.pin.${flat[cursor].day}`)].find(p=>p.getAttribute("data-tip").includes(flat[cursor].node[1]));if(match){match.style.filter="drop-shadow(0 0 12px #ffcc33)";}});
+const cl=document.getElementById("checklist");checklist.forEach((c,i)=>{const id="ck"+i,checked=localStorage.getItem(id)==="1";const label=document.createElement("label");label.innerHTML=`<input type="checkbox" ${checked?"checked":""}> <span>${c}</span>`;label.querySelector("input").addEventListener("change",e=>localStorage.setItem(id,e.target.checked?"1":"0"));cl.appendChild(label)});
+const tooltip=document.getElementById("tooltip");function show(e){tooltip.textContent=e.currentTarget.dataset.tip;tooltip.style.left=e.clientX+"px";tooltip.style.top=e.clientY+"px";tooltip.style.opacity=1}function move(e){tooltip.style.left=e.clientX+"px";tooltip.style.top=e.clientY+"px"}function hide(){tooltip.style.opacity=0}document.querySelectorAll(".pin").forEach(p=>{p.addEventListener("mouseenter",show);p.addEventListener("mousemove",move);p.addEventListener("mouseleave",hide);p.addEventListener("touchstart",e=>{const t=e.touches[0];show({currentTarget:p,clientX:t.clientX,clientY:t.clientY})},{passive:true})});document.getElementById("printBtn").addEventListener("click",()=>window.print());renderTimeline();
+</script>
+</body>
+</html>
