@@ -2,17 +2,39 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>天津3天2夜 · 闺蜜逛吃路线小程序</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>天津多日游 · 闺蜜逛吃路线</title>
   <style>
-    :root{--pink:#ff5f9f;--blue:#35a7ff;--green:#35c978;--ink:#241d2f;--muted:#665c72;--paper:#eff9fc;--cream:#fff6c9;--line:#e6edf2}
-    *{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#fff1f8,#ecf9ff);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",Arial,sans-serif}.app{width:min(1440px,100vw);margin:auto;padding:16px}.title{margin:0 auto 14px;width:min(1080px,100%);padding:18px 24px;border:5px solid #fff;border-radius:24px;background:linear-gradient(135deg,#ff7ab7,#ff4b92);box-shadow:0 16px 42px rgba(65,33,61,.22);color:#fff;text-align:center;font-size:clamp(28px,4vw,52px);font-weight:900;text-shadow:0 4px 0 rgba(145,30,88,.48)}.layout{display:grid;grid-template-columns:minmax(680px,1fr) 390px;gap:14px}.card{border:3px solid #fff;border-radius:24px;background:rgba(255,255,255,.78);box-shadow:0 16px 34px rgba(42,34,54,.14);overflow:hidden}.map-card{background:var(--paper)}svg{display:block;width:100%;height:auto}.controls{display:flex;flex-wrap:wrap;gap:8px;padding:12px 14px;border-bottom:1px solid var(--line);align-items:center}.controls button,.print{border:0;border-radius:999px;padding:9px 13px;background:#fff;color:var(--ink);font-weight:900;cursor:pointer;box-shadow:0 4px 12px rgba(36,29,47,.13)}.controls button.active{color:#fff}.controls button[data-day=day1].active{background:var(--pink)}.controls button[data-day=day2].active{background:var(--blue)}.controls button[data-day=day3].active{background:var(--green)}.print{margin-left:auto;background:var(--ink);color:#fff}.side{display:flex;flex-direction:column;gap:14px}.panel{padding:14px}.panel h2{margin:0 0 10px;font-size:20px}.hint{margin:0 0 10px;color:var(--muted);font-weight:700;font-size:13px;line-height:1.45}.timeline{display:grid;gap:8px;max-height:690px;overflow:auto;padding-right:4px}.item{display:grid;grid-template-columns:58px 1fr;gap:8px;padding:10px;border:1px solid var(--line);border-radius:14px;background:#fff}.item strong{display:block;margin-bottom:3px}.item p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}.time{font-weight:900;color:var(--ink)}.tag{display:inline-block;margin-top:5px;padding:3px 7px;border-radius:999px;background:#fff0f6;color:#c93278;font-size:12px;font-weight:900}.checklist{display:grid;gap:7px}.checklist label{display:flex;gap:8px;align-items:flex-start;padding:8px;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:13px;line-height:1.35}.route-base{fill:none;stroke:#fff;stroke-width:16;stroke-linecap:round;stroke-linejoin:round}.route{fill:none;stroke-width:7;stroke-dasharray:16 14;stroke-linecap:round;stroke-linejoin:round;filter:url(#shadow);transition:opacity .2s}.day1{stroke:var(--pink)}.day2{stroke:var(--blue)}.day3{stroke:var(--green)}.dim{opacity:.16}.pin{cursor:help;transition:opacity .2s}.pin-shape{fill:var(--cream);stroke:var(--ink);stroke-width:3}.pin-dot{fill:#fff;stroke:var(--ink);stroke-width:2}.node-label{fill:#ffe2ef;stroke:var(--ink);stroke-width:2;rx:12;filter:url(#labelShadow)}.pin.food .node-label{fill:#ffe2ef}.pin.photo .node-label{fill:#d9f8e6}.pin.end .node-label{fill:#c9edff}.pin.start .node-label{fill:#ffe66d}.pin text{fill:var(--ink);font-size:16px;font-weight:900;text-anchor:middle;dominant-baseline:middle}.note rect{fill:rgba(36,29,47,.9);stroke:#fff;stroke-width:2;rx:9;filter:url(#labelShadow)}.note text{fill:#fff;font-size:14px;font-weight:900;text-anchor:middle;dominant-baseline:middle}.day-title text{fill:#fff;font-size:40px;font-weight:900;text-anchor:middle;paint-order:stroke;stroke:var(--ink);stroke-width:6;stroke-linejoin:round}.day-title rect{stroke:#fff;stroke-width:4;rx:18;filter:url(#shadow)}.bg-road{fill:none;stroke:#efd77d;stroke-width:9;stroke-linecap:round;opacity:.55}.bg-water{fill:none;stroke:#b8ecf8;stroke-width:34;stroke-linecap:round;opacity:.85}.zone{fill:rgba(255,255,255,.42);stroke:#fff;stroke-width:3}.tooltip{position:fixed;z-index:20;max-width:330px;padding:10px 12px;border-radius:12px;background:rgba(36,29,47,.94);color:#fff;font-size:14px;font-weight:750;line-height:1.45;pointer-events:none;opacity:0;transform:translate(-50%,calc(-100% - 14px));box-shadow:0 12px 26px rgba(25,20,34,.26)}@media(max-width:1100px){.layout{grid-template-columns:1fr}.side{grid-template-columns:1fr 1fr;display:grid}.timeline{max-height:none}}@media(max-width:760px){.app{padding:10px}.map-card{overflow-x:auto}svg{min-width:1120px}.side{display:flex}.print{margin-left:0;width:100%}}@media print{.controls,.side{display:none}.layout{display:block}.app{padding:0}.card{border:0;box-shadow:none}}
-    .controls button[data-day=all].active{background:var(--ink)}
+    :root{--pink:#ff5f9f;--blue:#35a7ff;--green:#35c978;--purple:#9c27b0;--ink:#241d2f;--muted:#665c72;--paper:#eff9fc;--cream:#fff6c9;--line:#e6edf2}
+    *{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#fff1f8,#ecf9ff);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",Arial,sans-serif}.app{width:min(1440px,100vw);margin:auto;padding:16px}.title{margin:0 auto 14px;width:min(1080px,100%);padding:18px 24px;border:5px solid #fff;border-radius:24px;background:linear-gradient(135deg,#ff7ab7,#ff4b92);box-shadow:0 16px 42px rgba(65,33,61,.22);color:#fff;text-align:center;font-size:clamp(24px,4vw,42px);font-weight:900;text-shadow:0 4px 0 rgba(145,30,88,.48)}.layout{display:grid;grid-template-columns:minmax(680px,1fr) 390px;gap:14px}.card{border:3px solid #fff;border-radius:24px;background:rgba(255,255,255,.78);box-shadow:0 16px 34px rgba(42,34,54,.14);overflow:hidden}.map-card{background:var(--paper)}svg{display:block;width:100%;height:auto}.controls{display:flex;flex-wrap:wrap;gap:8px;padding:12px 14px;border-bottom:1px solid var(--line);align-items:center}.controls button,.print{border:0;border-radius:999px;padding:9px 13px;background:#fff;color:var(--ink);font-weight:900;cursor:pointer;box-shadow:0 4px 12px rgba(36,29,47,.13)}.controls button.active{color:#fff}.controls button[data-day=day1].active{background:var(--pink)}.controls button[data-day=day2].active{background:var(--blue)}.controls button[data-day=day3].active{background:var(--green)}.controls button[data-day=day4].active{background:var(--purple)}.print{margin-left:auto;background:var(--ink);color:#fff}.side{display:flex;flex-direction:column;gap:14px}.panel{padding:14px}.panel h2{margin:0 0 10px;font-size:20px}.hint{margin:0 0 10px;color:var(--muted);font-weight:700;font-size:13px;line-height:1.45}.weather-hint{background:#fff8e1;border:1px solid #ffe082;border-radius:8px;padding:8px;margin-bottom:10px;font-weight:bold;color:#e65100!important;font-size:13px;line-height:1.5}.timeline{display:grid;gap:8px;max-height:690px;overflow:auto;padding-right:4px}.item{display:grid;grid-template-columns:58px 1fr;gap:8px;padding:10px;border:1px solid var(--line);border-radius:14px;background:#fff}.item strong{display:block;margin-bottom:3px}.item p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}.time{font-weight:900;color:var(--ink)}.tag{display:inline-block;margin-top:5px;padding:3px 7px;border-radius:999px;background:#fff0f6;color:#c93278;font-size:12px;font-weight:900}.checklist{display:grid;gap:7px}.checklist label{display:flex;gap:8px;align-items:flex-start;padding:8px;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:13px;line-height:1.35}.route-base{fill:none;stroke:#fff;stroke-width:16;stroke-linecap:round;stroke-linejoin:round}.route{fill:none;stroke-width:7;stroke-dasharray:16 14;stroke-linecap:round;stroke-linejoin:round;filter:url(#shadow);transition:opacity .2s}.day1{stroke:var(--pink)}.day2{stroke:var(--blue)}.day3{stroke:var(--green)}.day4{stroke:var(--purple)}.dim{opacity:.16}.pin{cursor:pointer;transition:filter .3s ease}.pin.active-pin{filter:drop-shadow(0 0 12px #ffcc33)}.pin-shape{fill:var(--cream);stroke:var(--ink);stroke-width:3}.pin-dot{fill:#fff;stroke:var(--ink);stroke-width:2}.node-label{fill:#ffe2ef;stroke:var(--ink);stroke-width:2;rx:12;filter:url(#labelShadow)}.pin.food .node-label{fill:#fff3e0}.pin.photo .node-label{fill:#d9f8e6}.pin.end .node-label{fill:#c9edff}.pin.start .node-label{fill:#ffe66d}.pin text{fill:var(--ink);font-size:15px;font-weight:900;text-anchor:middle;dominant-baseline:middle}.note rect{fill:rgba(36,29,47,.9);stroke:#fff;stroke-width:2;rx:9;filter:url(#labelShadow)}.note text{fill:#fff;font-size:13px;font-weight:900;text-anchor:middle;dominant-baseline:middle}.food-note rect{fill:#fff0f6;stroke:var(--pink);stroke-width:2}.food-note text{fill:#c93278;font-size:12px;font-weight:900}.day-title text{fill:#fff;font-size:36px;font-weight:900;text-anchor:middle;paint-order:stroke;stroke:var(--ink);stroke-width:6;stroke-linejoin:round}.day-title rect{stroke:#fff;stroke-width:4;rx:18;filter:url(#shadow)}.bg-road{fill:none;stroke:#efd77d;stroke-width:9;stroke-linecap:round;opacity:.55}.bg-water{fill:none;stroke:#b8ecf8;stroke-width:34;stroke-linecap:round;opacity:.85}.zone{fill:rgba(255,255,255,.42);stroke:#fff;stroke-width:3}.tooltip{position:fixed;z-index:20;max-width:330px;padding:10px 12px;border-radius:12px;background:rgba(36,29,47,.94);color:#fff;font-size:13px;font-weight:750;line-height:1.45;pointer-events:none;opacity:0;transform:translate(-50%,calc(-100% - 14px));box-shadow:0 12px 26px rgba(25,20,34,.26)}
+    .details-card{position:fixed;bottom:20px;right:20px;width:320px;z-index:100;background:rgba(255,255,255,.98);padding:18px;border:3px solid #fff;border-radius:24px;box-shadow:0 10px 40px rgba(0,0,0,.2);transition:all .3s ease; max-height: 80vh; overflow-y: auto;}
+    .details-card.hidden{opacity:0;transform:translateY(20px);pointer-events:none}
+    .close-btn{position:absolute;top:10px;right:14px;border:none;background:none;font-size:24px;cursor:pointer;color:var(--muted)}
+    .dc-title{margin:0 0 12px;font-size:18px;color:var(--pink);font-weight:900;border-bottom:2px solid #fce4ec;padding-bottom:8px}
+    .dc-content p{margin:8px 0;font-size:14px;line-height:1.6;color:var(--ink)}
+    .dc-content strong{color:var(--muted);font-weight:700}
+    .dc-tip{font-size:13px!important;color:var(--muted)!important;background:#f8f4f6;padding:8px 10px;border-radius:8px;border-left:3px solid var(--pink)}
+    .dc-weather{font-size:13px!important;background:#e8f4fd;padding:8px 10px;border-radius:8px;border-left:3px solid var(--blue);color:var(--blue)!important;font-weight:bold;line-height:1.5}
+    /* 备选方案卡片 */
+    .backup-card{margin-top:14px;background:rgba(255,255,255,.92);border:3px solid #fff;border-radius:24px;box-shadow:0 16px 34px rgba(42,34,54,.14);overflow:hidden}
+    .backup-head{background:linear-gradient(135deg,#ffb74d,#ff9800);color:#fff;padding:14px 20px;font-size:20px;font-weight:900;display:flex;align-items:center;gap:10px;text-shadow:0 2px 0 rgba(145,60,10,.35)}
+    .backup-head .tag-new{background:#fff;color:#e65100;border-radius:8px;padding:2px 8px;font-size:13px}
+    .backup-body{padding:14px 20px 18px;display:grid;gap:10px}
+    .backup-map-container{margin-bottom:10px;border:2px dashed #ffcc80;border-radius:14px;background:#fffdf7;overflow:hidden}
+    .backup-map-container svg{width:100%;height:auto;display:block}
+    .backup-item{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#fff}
+    .backup-item .time{font-weight:900;color:var(--ink);font-size:14px}
+    .backup-item strong{display:block;margin-bottom:3px;color:var(--ink)}
+    .backup-item p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+    .backup-note{margin:0 20px 18px;background:#fff8e1;border:1px solid #ffe082;border-radius:12px;padding:10px 14px;font-size:13px;color:#e65100;font-weight:700;line-height:1.6}
+    .backup-pin{cursor:pointer;transition:filter .3s ease}
+    .backup-pin.active-backup-pin{filter:drop-shadow(0 0 10px #ff9800)}
+    @media(max-width:1100px){.layout{grid-template-columns:1fr}.side{grid-template-columns:1fr 1fr;display:grid}.timeline{max-height:none}}@media(max-width:760px){.app{padding:10px}.map-card{overflow-x:auto}svg{min-width:1120px}.side{display:flex}.print{margin-left:0;width:100%}.details-card{width:calc(100% - 40px);bottom:10px;right:10px}.backup-item{grid-template-columns:60px 1fr}}@media print{.controls,.side,.details-card{display:none}.layout{display:block}.app{padding:0}.card{border:0;box-shadow:none}.backup-card{border:0;box-shadow:none}}
   </style>
 </head>
 <body>
 <main class="app">
-  <h1 class="title">天津3天2夜 · 人生首次合体出游路线图</h1>
+  <h1 class="title">天津多日游 · 闺蜜逛吃路线图</h1>
   <section class="layout">
     <div class="card map-card">
       <div class="controls">
@@ -20,15 +42,16 @@
         <button data-day="day1">Day 1</button>
         <button data-day="day2">Day 2</button>
         <button data-day="day3">Day 3</button>
+        <button data-day="day4">Day 4</button>
         <button id="nextStop">下一站</button>
         <button class="print" id="printBtn">打印 / 另存为 PDF</button>
       </div>
-      <svg id="svg" viewBox="0 0 1600 2200" role="img" aria-label="天津三天两夜逛吃路线图">
+      <svg id="svg" viewBox="0 0 1600 2300" role="img" aria-label="天津逛吃路线图">
         <defs><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#33253a" flood-opacity=".22"/></filter><filter id="labelShadow" x="-40%" y="-50%" width="180%" height="200%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#2c2235" flood-opacity=".23"/></filter></defs>
-        <rect width="1600" height="2200" fill="#eff9fc"/>
+        <rect width="1600" height="2300" fill="#eff9fc"/>
         <path class="bg-water" d="M1240 70 C1120 330 1260 560 1000 760 C730 968 780 1280 560 1510 C350 1728 475 2020 780 2110"/>
         <path class="bg-road" d="M80 225 C430 260 820 250 1520 190"/><path class="bg-road" d="M60 700 C480 650 1010 660 1540 720"/><path class="bg-road" d="M80 1180 C420 1120 1000 1160 1530 1300"/><path class="bg-road" d="M120 1740 C520 1620 1050 1650 1500 1860"/><path class="bg-road" d="M330 80 C380 520 285 1020 350 1530 C390 1830 360 2040 300 2150"/><path class="bg-road" d="M790 80 C835 530 740 960 790 1460 C835 1800 805 2000 760 2150"/><path class="bg-road" d="M1270 90 C1215 580 1310 1040 1280 1530 C1260 1830 1370 2010 1480 2140"/>
-        <rect class="zone" x="55" y="95" width="1490" height="585" rx="34"/><rect class="zone" x="55" y="795" width="1490" height="560" rx="34"/><rect class="zone" x="55" y="1470" width="1490" height="560" rx="34"/>
+        <rect class="zone" x="55" y="95" width="1490" height="585" rx="34"/><rect class="zone" x="55" y="795" width="1490" height="560" rx="34"/><rect class="zone" x="55" y="1420" width="1490" height="390" rx="34"/><rect class="zone" x="55" y="1870" width="1490" height="390" rx="34"/>
         <g id="routes"></g><g id="notes"></g><g id="pins"></g><g id="titles"></g>
       </svg>
       <div class="tooltip" id="tooltip" role="tooltip"></div>
@@ -36,6 +59,7 @@
     <aside class="side">
       <div class="card panel">
         <h2 id="panelTitle">全部行程</h2>
+        <div id="panelWeather" class="weather-hint" style="display:none;"></div>
         <p class="hint" id="panelHint">点击上方 Day 按钮可只看某一天；点击“下一站”会按完整行程依次高亮。</p>
         <div class="timeline" id="timeline"></div>
       </div>
@@ -46,30 +70,464 @@
       </div>
     </aside>
   </section>
+
+  <!-- 备选方案卡片 -->
+  <section class="backup-card">
+    <div class="backup-head">
+      <span>（备选）DAY-04 🌧️</span>
+      <span class="tag-new">仅当 Z308 候补失败时启用</span>
+    </div>
+    <div class="backup-body">
+      <!-- 这里放备选方案的路线图 -->
+      <div class="backup-map-container" id="backupMap"></div>
+      
+      <div class="backup-item">
+        <div class="time">07:30</div>
+        <div>
+          <strong>南苑e家 · 退房寄存</strong>
+          <p>退房，行李寄存在前台，轻装出门。</p>
+        </div>
+      </div>
+      <div class="backup-item">
+        <div class="time">08:00</div>
+        <div>
+          <strong>🍽️ 西北角 / 桥园里早点</strong>
+          <p>最后吃一顿地道天津早点，煎饼果子或大饼夹一切。</p>
+        </div>
+      </div>
+      <div class="backup-item">
+        <div class="time">09:00</div>
+        <div>
+          <strong>🍽️ 南市食品街 / 鼓楼</strong>
+          <p>最后补买伴手礼（十八街麻花、蜜麻花、白皮点心）。</p>
+        </div>
+      </div>
+      <div class="backup-item">
+        <div class="time">11:00</div>
+        <div>
+          <strong>🍽️ 告别午餐</strong>
+          <p>找一家环境好的餐厅，悠闲吃一顿告别午餐，两人碰杯留念。</p>
+        </div>
+      </div>
+      <div class="backup-item">
+        <div class="time">13:30</div>
+        <div>
+          <strong>南苑e家 · 取行李</strong>
+          <p>回酒店取行李，检查充电器和证件。</p>
+        </div>
+      </div>
+      <div class="backup-item">
+        <div class="time">14:00</div>
+        <div>
+          <strong>📍 高芳返程（天津西站）</strong>
+          <p>【高芳】G1711次16:05发车，乘地铁1号线前往天津西站（约15分钟），时间充裕。</p>
+        </div>
+      </div>
+      <div class="backup-item">
+        <div class="time">15:00</div>
+        <div>
+          <strong>📍 嘉芳自由活动（备选K1622）</strong>
+          <p>【嘉芳】若Z308未候补到，改乘K1622（22:16发车）。下午建议去天津站附近开钟点房休息，或在海河边咖啡馆发呆，保存体力。</p>
+        </div>
+      </div>
+      <div class="backup-item">
+        <div class="time">20:30</div>
+        <div>
+          <strong>📍 嘉芳返程（天津站）</strong>
+          <p>【嘉芳】乘地铁1号线或打车前往天津站，准备22:16乘坐K1622次。路途较长，带好颈枕、眼罩、零食和充电宝！</p>
+        </div>
+      </div>
+    </div>
+    <p class="backup-note">💡 提示：Z308候补结果通常在发车前1-2天确定。10月5日晚上务必登录12306查看候补状态。若候补失败，立即购买K1622次（天津站22:16发车，天津—深圳东），虽然路途长，但能确保10月7日到达深圳。</p>
+  </section>
+
 </main>
+
+<!-- 详情弹窗卡片 -->
+<div id="detailsCard" class="details-card hidden">
+  <button class="close-btn" onclick="document.getElementById('detailsCard').classList.add('hidden')">×</button>
+  <h3 class="dc-title" id="dcTitle">地点名称</h3>
+  <div class="dc-content" id="dcContent"></div>
+</div>
+
 <script>
 const NS="http://www.w3.org/2000/svg";
 const days=[
-{id:"day1",name:"Day 1",color:"var(--pink)",title:["DAY-01",190,150],hint:"10月3日：海河沿岸、和平区、游船夜景。",nodes:[
-["06:14","天津站",130,260,"start","抵达天津站，打车约9公里20分钟到酒店寄存行李。"],["07:00","南苑e家",315,260,"end","南苑e家（天津西站人民医院店），先寄存行李再轻装出门。"],["09:30","西北角站",500,260,"photo","从酒店步行至西北角站，乘1号线约15分钟到营口道。"],["10:00","营口道站",685,260,"photo","和平区步行线起点。"],["10:10","西开大教堂",870,260,"photo","拍照点，尊重宗教场所秩序。"],["10:35","滨江道",1055,260,"photo","商业街边走边逛。"],["10:55","瓷房子",1240,260,"photo","外观拍照，人多时注意排队。"],["11:10","张学良故居",1425,260,"photo","建议提前确认开放时段。"],["11:25","劝业场",1425,500,"photo","和平路地标。"],["11:30","同庆德",1240,500,"food","同庆德·天津菜，山楂排骨、老爆三、醋溜木须，不点八珍豆腐。"],["13:30","五大道",1055,500,"photo","五大道适合骑行和拍照。"],["14:00","民园广场",870,500,"photo","五大道核心拍照点。"],["14:30","疙瘩楼",685,500,"photo","特色建筑顺路打卡。"],["15:30","泰安道",500,500,"photo","英伦风街道。"],["16:00","安里甘教堂",315,500,"photo","泰安道附近外观拍照。"],["17:00","锅大婶",130,500,"food","八珍豆腐留给这里吃，17:30前到或电话问号。"],["19:30","天津站码头",130,620,"end","海河游船19:30场，需提前预约；返程建议打车或天津站2号线换1号线。"]],notes:["打车9公里/20分钟","步行900米/12分钟","地铁1号线15分钟","步行150米/2分钟","步行600米/8分钟","步行520米/7分钟","步行120米/2分钟","步行320米/5分钟","步行450米/7分钟","步行1.8公里/25分钟","步行250米/4分钟","步行260米/4分钟","步行1.5公里/22分钟","步行120米/2分钟","步行1.6公里/24分钟","打车3公里/15分钟"]},
-{id:"day2",name:"Day 2",color:"var(--blue)",title:["DAY-02",190,850],hint:"10月4日：红桥区早餐、老城、天津博物馆、金刚桥夜景。",nodes:[
-["07:00","南苑e家",130,980,"end","酒店出发。"],["07:10","西北角美食街",315,980,"food","锅巴菜、卷圈、面茶，7:00前到更稳。"],["08:00","洪湖里站",500,980,"food","1号线1站约3分钟，吃蒸饼、焖子。"],["08:20","欣乐糕点",685,980,"food","买京糕排。"],["08:30","西北角/酒店",870,980,"end","回酒店化妆整理，别把上午排太满。"],["10:00","鼓楼站",1055,980,"photo","西北角到西南角换2号线到鼓楼。"],["10:20","古文化街",1240,980,"photo","泥人张、杨柳青年画、耳朵眼炸糕、熟梨糕。"],["11:20","鼓楼",1425,980,"photo","老城商业区。"],["12:00","添万囍",1425,1215,"food","三鲜捞面，人均约40元。"],["13:30","天津博物馆",1055,1215,"photo","免费预约，16:00停止入场。"],["17:30","益发顺",685,1215,"food","茄盒、醋椒豆腐、鲜虾茄盒，17:30前到店。"],["19:00","金刚桥",315,1215,"photo","拍天津之眼，不坐摩天轮；返酒店建议打车或骑行到近站换乘。"]],notes:["打车/单车2公里/10分钟","地铁1号线3分钟","步行150米/2分钟","地铁1号线20分钟","地铁1转2号线/25分钟","步行1.3公里/18分钟","步行900米/13分钟","步行500米/7分钟","打车4公里/15分钟","打车5公里/20分钟","打车2.5公里/10分钟"]},
-{id:"day3",name:"Day 3",color:"var(--green)",title:["DAY-03",190,1525],hint:"10月5日：桥园里早点、西北角补甜品、伴手礼、返程。",nodes:[
-["07:30","南苑e家",130,1650,"end","退房寄存行李，轻装出门。"],["08:15","桥园里",315,1650,"food","大饼夹一切，不要吃太撑。"],["09:00","西北角",500,1650,"food","乘1号线约12分钟。"],["09:10","古香斋刨冰",685,1650,"food","前两天没吃到就补。"],["09:30","鼓楼商业街",870,1650,"food","买伴手礼。"],["10:00","南市食品街",1055,1650,"food","十八街麻花、蜜麻花、白皮点心。"],["10:30","昱德来",1240,1650,"food","牛窝骨、肘子；如果改在鼓楼吃，可选耳朵眼或马记富来。"],["11:30","南苑e家取行李",1425,1650,"end","回酒店取行李，检查充电器和证件。"],["12:30","天津西站",1425,1885,"end","打车约4公里10到15分钟，16:05乘G1711返程。"]],notes:["打车约9公里/25分钟","地铁1号线12分钟","步行至刨冰","步行1.4公里/20分钟","步行650米/9分钟","打车3公里/15分钟","打车返酒店取行李","打车4公里/15分钟"]}
+{id:"day1",name:"Day 1",color:"var(--pink)",title:["DAY-01",190,150],weather:"☁️ 阵雨 19~22℃ | 带伞+防风外套",hint:"10月3日：海河沿岸、和平区、游船夜景。",nodes:[
+["06:14","天津站",130,260,"start","抵达天津站，打车约9公里20分钟到酒店寄存行李。",{intro:"抵达起点",photo:"站前广场",secret:"站内角落",pose:"期待背影"}],
+["07:00","南苑e家（天津西站人民医院店）",315,260,"end","南苑e家（天津西站人民医院店），先寄存行李再轻装出门。",{intro:"经济舒适酒店",photo:"大堂",secret:"房间窗边",pose:"行李合照"}],
+["09:30","西北角站",500,260,"photo","从酒店步行至西北角站，乘1号线约15分钟到营口道。",{intro:"地铁中转站",photo:"站牌",secret:"无",pose:"进站抓拍"}],
+["10:00","营口道站",685,260,"photo","和平区步行线起点。",{intro:"和平区起点",photo:"地铁站",secret:"无",pose:"出发照"}],
+["10:10","西开大教堂",870,260,"photo","拍照点，尊重宗教场所秩序。",{intro:"法式罗曼建筑",photo:"正面全景、对称构图",secret:"右侧侧门",pose:"长椅阅读、对称站立"}],
+["10:35","滨江道",1055,260,"photo","商业街边走边逛。",{intro:"繁华商业街",photo:"劝业场橱窗",secret:"小巷内",pose:"走拍、回头抓拍",food:"古香斋刨冰、必点海鲜（滨江道店）"}],
+["10:55","瓷房子",1240,260,"photo","外观拍照，人多时注意排队。",{intro:"瓷片拼成的洋楼",photo:"马路对面全景",secret:"侧边围墙",pose:"仰拍、窗框构图"}],
+["11:10","张学良故居",1425,260,"photo","建议提前确认开放时段。",{intro:"少帅故居",photo:"门口台阶",secret:"侧门",pose:"历史感漫步"}],
+["11:25","劝业场",1425,500,"photo","和平路地标。",{intro:"百年商场",photo:"建筑外观",secret:"无",pose:"复古港风"}],
+["11:30","同庆德·天津菜（天河城店）",1240,500,"food","同庆德·天津菜（天河城店），山楂排骨、老爆三、醋溜木须，不点八珍豆腐。",{intro:"老字号天津菜",must:"山楂排骨、老爆三、醋溜木须",backup1:"顺兴德·天津菜馆（和平店）| 老爆三、鲜虾茄盒 | 步行15分钟 | 步行至张园",backup2:"陈傻子餐厅（世纪都会店）| 八珍豆腐 | 步行10分钟 | 步行至张园"}],
+["13:00","张园",1055,500,"photo","《潜伏》李涯坠楼拍摄地，主打复古建筑拍照，不看演出。",{intro:"《潜伏》取景地，和平区鞍山道59号",photo:"主楼红墙、旋转楼梯",secret:"二楼阳台",pose:"民国复古大片"}],
+["14:30","五大道",870,500,"photo","五大道适合骑行和拍照。",{intro:"万国建筑博览苑",photo:"民园广场、疙瘩楼",secret:"先农大院",pose:"骑行抓拍、复古大片"}],
+["15:00","民园广场",685,500,"photo","五大道核心拍照点。",{intro:"五大道核心",photo:"环形跑道",secret:"看台角落",pose:"奔跑抓拍"}],
+["15:30","疙瘩楼",500,500,"photo","特色建筑顺路打卡。",{intro:"瓷片建筑",photo:"外墙细节",secret:"无",pose:"侧身仰望"}],
+["16:00","泰安道",315,500,"photo","英伦风街道。",{intro:"英式风情街",photo:"街景纵深感",secret:"无",pose:"电影感街拍"}],
+["16:30","安里甘教堂",130,500,"photo","泰安道附近外观拍照。",{intro:"百年教堂",photo:"教堂正面",secret:"侧面草坪",pose:"逆光剪影"}],
+["17:30","锅大婶·八珍豆腐（五大道店）",400,650,"food","八珍豆腐留给这里吃，17:30前到或电话问号。",{intro:"八珍豆腐招牌店",must:"八珍豆腐",backup1:"桂园餐厅（成都道62号）| 黑蒜子牛肉粒、八珍豆腐 | 步行12分钟 | 打车去天津站码头",backup2:"肘子酥（广西路店）| 肘子、春饼 | 步行15分钟 | 打车去天津站码头"}],
+["19:30","天津站码头",650,780,"end","海河游船19:30场，需提前预约；返程建议打车或天津站2号线换1号线。",{intro:"海河游船码头",photo:"游船右侧甲板",secret:"船尾",pose:"夜景合影"}]],
+notes:["打车9公里/20分钟","步行900米/12分钟","地铁1号线15分钟","步行150米/2分钟","步行600米/8分钟","步行520米/7分钟","步行120米/2分钟","步行320米/5分钟","步行450米/7分钟","步行1.2公里/18分钟","步行1公里/15分钟","步行250米/4分钟","步行260米/4分钟","步行1.5公里/22分钟","步行120米/2分钟","步行1.6公里/24分钟","打车3公里/15分钟"]},
+{id:"day2",name:"Day 2",color:"var(--blue)",title:["DAY-02",190,850],weather:"☀️ 多云 18~25℃ | 防晒+运动鞋 | 西北角早餐排队长",hint:"10月4日：红桥区早餐、老城、天津博物馆、金刚桥夜景。",nodes:[
+["07:00","南苑e家",130,980,"end","酒店出发。",{intro:"酒店出发",photo:"房间穿搭",secret:"无",pose:"元气满满"}],
+["07:10","西北角美食街",315,980,"food","锅巴菜、卷圈、面茶，7:00前到更稳。",{intro:"碳水天堂",photo:"早点摊",secret:"巷子深处",pose:"吃货抓拍"}],
+["08:00","洪湖里站",500,980,"food","1号线1站约3分钟，吃蒸饼、焖子。",{intro:"美食聚集地",photo:"街边小摊",secret:"无",pose:"边走边吃"}],
+["08:20","欣乐糕点（洪湖里总店）",685,980,"food","买京糕排。",{intro:"传统糕点铺",photo:"糕点柜台",secret:"无",pose:"挑选糕点"}],
+["08:30","西北角/酒店",870,980,"end","回酒店化妆整理，别把上午排太满。",{intro:"回酒店休整",photo:"化妆台",secret:"窗边自然光",pose:"对镜自拍"}],
+["10:00","鼓楼站",1055,980,"photo","西北角到西南角换2号线到鼓楼。",{intro:"老城中心",photo:"鼓楼建筑",secret:"侧边街道",pose:"古风回眸"}],
+["10:20","古文化街",1240,980,"photo","泥人张、杨柳青年画、耳朵眼炸糕、熟梨糕。",{intro:"津门故里",photo:"戏楼、泥人张",secret:"侧边小巷",pose:"拿糖画回眸",food:"熟梨糕、耳朵眼炸糕"}],
+["11:20","鼓楼",1425,980,"photo","老城商业区。",{intro:"老城商业区",photo:"街景",secret:"无",pose:"随性漫步"}],
+["12:00","添万囍·天津三鲜捞面（水游城店）",1425,1215,"food","三鲜捞面，人均约40元。",{intro:"特色三鲜捞面",must:"三鲜捞面",backup1:"同发号水游城店 | 八珍豆腐、红烧牛窝骨 | 同栋楼3层 | 打车去天津博物馆",backup2:"水游城丽筠酒店中餐厅 | 八珍豆腐 | 步行5分钟 | 打车去天津博物馆"}],
+["13:30","天津博物馆",1055,1215,"photo","免费预约，16:00停止入场。",{intro:"历史艺术殿堂",photo:"建筑外观",secret:"工作日午后",pose:"看展侧影"}],
+["17:30","益发顺总店·清真（天宝公寓店）",685,1215,"food","茄盒、醋椒豆腐、鲜虾茄盒，17:30前到店。",{intro:"清真老字号",must:"茄盒、醋椒豆腐、鲜虾茄盒",backup1:"利德顺小老饭庄（总店）| 红烧牛窝骨、锅塌三样 | 打车8分钟 | 打车去金刚桥",backup2:"清真鸿起来饭庄 | 奶爆三样、老爆三 | 打车8分钟 | 打车去金刚桥"}],
+["19:00","金刚桥",315,1215,"photo","拍天津之眼，不坐摩天轮；返酒店建议打车或骑行到近站换乘。",{intro:"天津之眼最佳机位",photo:"桥栏杆旁",secret:"桥下台阶",pose:"与摩天轮合影、夜景剪影"}]],
+notes:["打车/单车2公里/10分钟","地铁1号线3分钟","步行150米/2分钟","地铁1号线20分钟","地铁1转2号线/25分钟","步行1.3公里/18分钟","步行900米/13分钟","步行500米/7分钟","打车4公里/15分钟","打车5公里/20分钟","打车2.5公里/10分钟"]},
+{id:"day3",name:"Day 3",color:"var(--green)",title:["DAY-03",190,1450],weather:"🌧️ 小雨转阴 17~23℃ | 带伞 | 市区深度补漏",hint:"10月5日：桥园里早点、庆王府、解放北路、意风区夜景。",nodes:[
+["08:00","南苑e家",130,1550,"end","起床出发，轻装出门。",{intro:"酒店出发",photo:"大堂",secret:"无",pose:"元气出发"}],
+["08:30","西北角美食街（补漏）",315,1550,"food","把前两天没吃到的早点补上。",{intro:"碳水补漏",photo:"早点摊",secret:"巷子深处",pose:"吃货抓拍"}],
+["09:30","桥园里（大饼夹一切）",500,1550,"food","大饼夹一切！灵魂卷饼，吃饱好逛街。",{intro:"接地气早点",photo:"摊前",secret:"无",pose:"大口吃"}],
+["10:30","南苑e家（回酒店化妆）",685,1550,"end","回酒店化妆、整理穿搭（约1.5小时）。",{intro:"回酒店休整",photo:"化妆台",secret:"窗边自然光",pose:"对镜自拍"}],
+["12:00","桂园餐厅（成都道62号）",870,1550,"food","黑蒜子牛肉粒、八珍豆腐，环境优雅适合正餐。",{intro:"五大道老洋房餐厅",must:"黑蒜子牛肉粒、八珍豆腐",backup1:"老永胜包子（五大道店）| 包子、天津菜 | 步行10分钟 | 饭后前往庆王府",backup2:"成林小白羊饭庄 | 牛肉烧卖、扒牛肉 | 打车10分钟 | 饭后前往庆王府"}],
+["13:30","庆王府",1055,1550,"photo","五大道上的小洋楼，内部陈设精美，拍照非常出片。",{intro:"庆亲王载振旧居",photo:"花园、走廊",secret:"二楼露台",pose:"复古名媛风"}],
+["15:00","解放北路（金融街）",1240,1550,"photo","东方华尔街，法式建筑群，适合街拍。",{intro:"东方华尔街",photo:"法式建筑群",secret:"路口转角",pose:"复古街拍"}],
+["16:30","意式风情区（白天版）",1425,1550,"photo","逛钟书阁，喝杯咖啡，拍白天洋楼。",{intro:"意式风情区",photo:"马可波罗广场",secret:"钟书阁内",pose:"文艺大片"}],
+["18:00","意式风情区（晚餐）",1425,1750,"food","在附近吃一顿悠闲的晚餐。",{intro:"意风区晚餐",must:"西餐或天津菜",backup1:"老胜香（意风区店）| 老味水馅包 | 步行5分钟 | 饭后在海河边散步",backup2:"成林小白羊饭庄 | 牛肉烧卖、扒牛肉 | 打车10分钟 | 饭后在海河边散步"}],
+["19:30","海河夜景（北安桥）",1055,1750,"photo","从意风区沿河走到北安桥，拍海河夜景。",{intro:"海河夜景",photo:"北安桥、意风区码头",secret:"桥栏杆旁",pose:"夜景合影"}],
+["21:00","南苑e家（回酒店）",130,1750,"end","打车回酒店，收拾行李，准备明天返程。",{intro:"回酒店休息",photo:"房间",secret:"无",pose:"整理行李"}]],
+notes:["步行/打车起步价","打车3公里/15分钟","打车3公里/15分钟","地铁1转2号线/25分钟","步行1公里/15分钟","步行500米/7分钟","步行1.5公里/22分钟","步行800米/12分钟","步行1公里/15分钟","打车3公里/15分钟"]},
+{id:"day4",name:"Day 4",color:"var(--purple)",title:["DAY-04",190,1950],weather:"🌧️ 小雨 17~23℃ | 带伞 | 高芳16:05，嘉芳12:11",hint:"10月6日：主方案（Z308候补成功）。上午买伴手礼，11点前嘉芳出发去天津站，下午高芳返程。",nodes:[
+["07:30","南苑e家",130,2100,"end","退房，行李寄存在前台。",{intro:"退房寄存",photo:"大堂",secret:"无",pose:"告别合影"}],
+["08:00","西北角/桥园里早点",315,2100,"food","最后吃一顿地道天津早点，煎饼果子或大饼夹一切。",{intro:"告别天津早点",photo:"早点摊",secret:"无",pose:"大口吃"}],
+["09:00","南市食品街/鼓楼",500,2100,"food","最后补买伴手礼（十八街麻花、蜜麻花、白皮点心）。",{intro:"伴手礼采购",photo:"老街",secret:"无",pose:"满载而归"}],
+["10:30","南苑e家取行李",685,2100,"end","回酒店取行李，检查充电器和证件。嘉芳准备出发！",{intro:"取行李",photo:"房间",secret:"无",pose:"最后检查"}],
+["10:45","嘉芳返程（天津站）",870,2100,"end","【嘉芳】Z308次12:11发车，乘地铁1号线前往天津站（约15分钟），务必提前到站！",{intro:"前往天津站",photo:"站前广场",secret:"无",pose:"开心返程"}],
+["12:00","高芳自由午餐",1055,2100,"food","【高芳】嘉芳走后，可在酒店附近吃个悠闲午餐。",{intro:"市区午餐",photo:"餐厅",secret:"无",pose:"慢慢享用"}],
+["14:30","高芳返程（天津西站）",1240,2100,"end","【高芳】G1711次16:05发车，乘地铁1号线前往天津西站（约15分钟），时间充裕。",{intro:"前往天津西站",photo:"站前广场",secret:"无",pose:"开心返程"}]],
+notes:["步行/打车起步价","地铁1号线12分钟","步行650米/9分钟","步行/打车回酒店","地铁1号线15分钟","步行/打车去餐厅","地铁1号线15分钟"]}
 ];
-const checklist=["海河游船预约10月3日19:30场","天津博物馆预约，确认16:00前入场","确认南苑e家清晨可寄存行李","开通支付宝或微信地铁乘车码","带身份证、充电宝、预约截图","准备防磨脚贴、肠胃药、消食片","衣服按天分装，伴手礼最后一天买"];
-const routes=document.getElementById("routes"),notes=document.getElementById("notes"),pins=document.getElementById("pins"),titles=document.getElementById("titles"),timeline=document.getElementById("timeline"),panelTitle=document.getElementById("panelTitle"),panelHint=document.getElementById("panelHint");
-function el(n,a={}){const e=document.createElementNS(NS,n);for(const[k,v]of Object.entries(a))e.setAttribute(k,v);return e}function txt(g,s,x,y,a={}){const t=el("text",{x,y,...a});t.textContent=s;g.appendChild(t);return t}function pathFor(nodes){return nodes.map((n,i)=>`${i?"L":"M"}${n[2]} ${n[3]}`).join(" ")}function labelW(s){return Math.max(82,Math.min(170,s.length*17+28))}
-function addNote(text,x,y,day){const parts=text.split("/"),g=el("g",{class:`note ${day}`,transform:`translate(${x} ${y})`}),w=Math.max(118,Math.max(...parts.map(p=>p.length))*16+26),h=parts.length>1?48:32;g.appendChild(el("rect",{x:-w/2,y:-h/2,width:w,height:h}));parts.forEach((p,i)=>txt(g,p,0,parts.length>1?-8+i*18:0));notes.appendChild(g)}
-function addPin(n,day){const[time,name,x,y,type,tip]=n,g=el("g",{class:`pin ${type} ${day}`,transform:`translate(${x} ${y})`,"data-tip":`${time} ${name}：${tip}`}),w=labelW(name);g.appendChild(el("title")).textContent=tip;g.appendChild(el("path",{class:"pin-shape",d:"M0,-22 C-13,-22 -24,-11 -24,2 C-24,20 0,38 0,38 C0,38 24,20 24,2 C24,-11 13,-22 0,-22Z"}));g.appendChild(el("circle",{class:"pin-dot",cx:0,cy:1,r:7}));g.appendChild(el("rect",{class:"node-label",x:-w/2,y:30,width:w,height:31}));txt(g,name,0,46);pins.appendChild(g)}
-function addSticker(day){const g=el("g",{class:`day-title ${day.id}`,transform:`translate(${day.title[1]} ${day.title[2]})`});g.appendChild(el("rect",{x:-95,y:-38,width:190,height:72,fill:day.color}));txt(g,day.title[0],0,12);titles.appendChild(g)}
-days.forEach(day=>{routes.appendChild(el("path",{class:`route-base ${day.id}`,d:pathFor(day.nodes)}));routes.appendChild(el("path",{class:`route ${day.id}`,d:pathFor(day.nodes)}));day.nodes.slice(0,-1).forEach((n,i)=>{const m=day.nodes[i+1];addNote(day.notes[i],(n[2]+m[2])/2,(n[3]+m[3])/2-38,day.id)});day.nodes.forEach(n=>addPin(n,day.id));addSticker(day)});
-function renderTimeline(dayId="all"){const selected=dayId==="all"?days:days.filter(d=>d.id===dayId);panelTitle.textContent=dayId==="all"?"全部行程":selected[0].name+" 行程";panelHint.textContent=dayId==="all"?"三天完整版路线，点击节点可看备注。":selected[0].hint;timeline.innerHTML="";selected.forEach(d=>d.nodes.forEach(n=>{const div=document.createElement("div");div.className="item";div.dataset.day=d.id;div.innerHTML=`<div class="time">${n[0]}</div><div><strong>${n[1]}</strong><p>${n[5]}</p><span class="tag">${d.name}</span></div>`;timeline.appendChild(div)}))}
-function filter(dayId){document.querySelectorAll(".controls button[data-day]").forEach(b=>b.classList.toggle("active",b.dataset.day===dayId));document.querySelectorAll(".route,.route-base,.pin,.note,.day-title").forEach(n=>{const show=dayId==="all"||n.classList.contains(dayId);n.classList.toggle("dim",!show)});renderTimeline(dayId)}
+const checklist=["【已确认】高芳G1711次（天津西16:05发车）","【主方案】嘉芳Z308候补成功（天津站12:11发车）","【备选方案】嘉芳K1622次（天津站22:16发车，路途长，带颈枕零食）","确认南苑e家10月5日晚已订房","海河游船预约10月3日19:30场","天津博物馆预约，确认16:00前入场","开通支付宝或微信地铁乘车码","带身份证、充电宝、预约截图","准备防磨脚贴、肠胃药、消食片","衣服按天分装，伴手礼最后一天买"];
+
+const routes=document.getElementById("routes"),notes=document.getElementById("notes"),pins=document.getElementById("pins"),titles=document.getElementById("titles"),timeline=document.getElementById("timeline"),panelTitle=document.getElementById("panelTitle"),panelHint=document.getElementById("panelHint"),panelWeather=document.getElementById("panelWeather");
+
+function el(n,a={}){const e=document.createElementNS(NS,n);for(const[k,v]of Object.entries(a))e.setAttribute(k,v);return e}
+function txt(g,s,x,y,a={}){const t=el("text",{x,y,...a});t.textContent=s;g.appendChild(t);return t}
+function pathFor(nodes){return nodes.map((n,i)=>`${i?"L":"M"}${n[2]} ${n[3]}`).join(" ")}
+function labelW(s){return Math.max(82,Math.min(250,s.length*17+28))}
+
+function addNote(text,x,y,day,foods){
+  const safeText = text || "步行/打车";
+  const parts=safeText.split("/"),g=el("g",{class:`note ${day}`,transform:`translate(${x} ${y})`});
+  const w=Math.max(118,Math.max(...parts.map(p=>p.length))*16+26),h=parts.length>1?48:32;
+  g.appendChild(el("rect",{x:-w/2,y:-h/2,width:w,height:h}));
+  parts.forEach((p,i)=>txt(g,p,0,parts.length>1?-8+i*18:0));
+  notes.appendChild(g);
+  
+  if(foods&&foods.length>0){
+    const foodText="🍡 "+foods.join("、");
+    const fg=el("g",{class:`food-note ${day}`,transform:`translate(${x} ${y+28})`});
+    const fw=Math.max(100,foodText.length*14+20);
+    fg.appendChild(el("rect",{x:-fw/2,y:-15,width:fw,height:30,rx:15}));
+    txt(fg,foodText,0,0,{fill:"#c93278","font-size":"12","font-weight":"bold"});
+    notes.appendChild(fg);
+    fg.addEventListener('click',()=>showFoodDetails(foodText));
+  }
+}
+
+function addPin(n,day){
+  const [time,name,x,y,type,tip,details]=n;
+  const g=el("g",{class:`pin ${type} ${day}`,transform:`translate(${x} ${y})`,"data-tip":`${time} ${name}：${tip}`});
+  const w=labelW(name);
+  g.appendChild(el("title")).textContent=tip;
+  g.appendChild(el("path",{class:"pin-shape",d:"M0,-22 C-13,-22 -24,-11 -24,2 C-24,20 0,38 0,38 C0,38 24,20 24,2 C24,-11 13,-22 0,-22Z"}));
+  g.appendChild(el("circle",{class:"pin-dot",cx:0,cy:1,r:7}));
+  g.appendChild(el("rect",{class:"node-label",x:-w/2,y:30,width:w,height:31}));
+  
+  let icon= type==='food'?'🍽️':(type==='photo'?'📸':'📍');
+  txt(g,icon+name,0,46);
+  
+  g.addEventListener('click',(e)=>{
+    e.stopPropagation();
+    showDetails(n);
+    document.querySelectorAll('.pin').forEach(p=>p.classList.remove('active-pin'));
+    g.classList.add('active-pin');
+  });
+  
+  pins.appendChild(g);
+}
+
+function addSticker(day){
+  const g=el("g",{class:`day-title ${day.id}`,transform:`translate(${day.title[1]} ${day.title[2]})`});
+  const weatherIcon = day.weather ? day.weather.split(" ")[0] : "";
+  const titleText = day.title[0] + (weatherIcon ? " " + weatherIcon : "");
+  const w = Math.max(190, titleText.length * 24 + 40);
+  g.appendChild(el("rect",{x:-w/2,y:-38,width:w,height:72,fill:day.color}));
+  txt(g, titleText, 0, 12);
+  g.addEventListener('click',()=>{
+    showDayOverview(day);
+    document.querySelectorAll('.pin').forEach(p=>p.classList.remove('active-pin'));
+  });
+  titles.appendChild(g);
+}
+
+days.forEach(day=>{
+  routes.appendChild(el("path",{class:`route-base ${day.id}`,d:pathFor(day.nodes)}));
+  routes.appendChild(el("path",{class:`route ${day.id}`,d:pathFor(day.nodes)}));
+  day.nodes.slice(0,-1).forEach((n,i)=>{
+    const m=day.nodes[i+1];
+    const details=n[6]||{};
+    const foods=details.food?details.food.split("、"):null;
+    addNote(day.notes[i],(n[2]+m[2])/2,(n[3]+m[3])/2-38,day.id,foods);
+  });
+  day.nodes.forEach(n=>addPin(n,day.id));
+  addSticker(day);
+});
+
+// === 备选方案路线图（带点击交互和路段标签） ===
+function renderBackupMap(){
+  const container = document.getElementById("backupMap");
+  if(!container) return;
+  const svg = el("svg",{viewBox:"0 0 1000 260",role:"img","aria-label":"备选方案路线图"});
+  const defs = el("defs");
+  const filter = el("filter",{id:"bShadow",x:"-20%",y:"-20%",width:"140%",height:"140%"});
+  filter.appendChild(el("feDropShadow",{dx:"0",dy:"3",stdDeviation:"3","flood-color":"#33253a","flood-opacity":".2"}));
+  defs.appendChild(filter);
+  svg.appendChild(defs);
+
+  // 备选方案节点数据（含详情）
+  const backupNodes = [
+    {time:"07:30",name:"南苑e家",x:70,y:60,type:"end",tip:"退房寄存",details:{intro:"南苑e家（天津西站人民医院店）",photo:"酒店大堂",secret:"房间窗边",pose:"行李合照"}},
+    {time:"08:00",name:"西北角早点",x:240,y:60,type:"food",tip:"煎饼果子/大饼夹一切",details:{intro:"西北角/桥园里早点",must:"煎饼果子、大饼夹一切",backup1:"其他早点摊 | 附近任意 | 饭后继续买伴手礼"}},
+    {time:"09:00",name:"南市食品街",x:410,y:60,type:"food",tip:"买伴手礼",details:{intro:"南市食品街/鼓楼",must:"十八街麻花、蜜麻花、白皮点心",backup1:"鼓楼商业街 | 步行5分钟 | 饭后去吃告别午餐"}},
+    {time:"11:00",name:"告别午餐",x:580,y:60,type:"food",tip:"悠闲告别午餐",details:{intro:"找一家环境好的餐厅",must:"天津菜或西餐",backup1:"酒店附近餐厅 | 步行5分钟 | 饭后回酒店取行李"}},
+    {time:"13:30",name:"取行李",x:750,y:60,type:"end",tip:"回酒店取行李",details:{intro:"南苑e家",photo:"酒店房间",secret:"无",pose:"最后检查"}},
+    {time:"14:00",name:"高芳返程",x:880,y:120,type:"end",tip:"天津西站 G1711",details:{intro:"高芳返程（天津西站）",must:"G1711次16:05发车",backup1:"地铁1号线直达 | 15分钟 | 提前1小时到站"}},
+    {time:"15:00",name:"嘉芳休息",x:750,y:200,type:"end",tip:"钟点房/咖啡馆休息",details:{intro:"嘉芳自由活动（备选K1622）",must:"天津站附近钟点房或咖啡馆",backup1:"海河边咖啡馆 | 步行10分钟 | 保存体力"}},
+    {time:"20:30",name:"嘉芳返程",x:580,y:200,type:"end",tip:"天津站 K1622",details:{intro:"嘉芳返程（天津站）",must:"K1622次22:16发车",backup1:"地铁1号线直达 | 15分钟 | 带好颈枕、眼罩、零食"}}
+  ];
+
+  const routePoints = backupNodes.map(n=>`${n.x} ${n.y}`).join(" L ");
+  svg.appendChild(el("path",{d:`M ${routePoints}`,fill:"none",stroke:"#ffb74d","stroke-width":8,"stroke-linecap":"round","stroke-linejoin":"round","stroke-dasharray":"16 14",filter:"url(#bShadow)"}));
+
+  // 绘制路段标签
+  const routes = [
+    {from:0, to:1, text:"步行15分钟"},
+    {from:1, to:2, text:"步行650米/9分钟"},
+    {from:2, to:3, text:"步行20分钟"},
+    {from:3, to:4, text:"步行15分钟"},
+    {from:4, to:5, text:"地铁1号线15分钟"},
+    {from:4, to:6, text:"打车10分钟"},
+    {from:6, to:7, text:"地铁1号线12分钟"}
+  ];
+
+  routes.forEach(r => {
+    const n1 = backupNodes[r.from];
+    const n2 = backupNodes[r.to];
+    let midX = (n1.x + n2.x) / 2;
+    let midY = (n1.y + n2.y) / 2;
+    
+    // 垂直方向偏移，避开节点标签
+    if (Math.abs(n1.y - n2.y) < 10) {
+      midY -= 28; // 水平路径，标签上移
+    } else if (Math.abs(n1.x - n2.x) < 10) {
+      midX += 60; // 垂直路径，标签右移
+    }
+
+    const w = Math.max(100, r.text.length * 13 + 20);
+    const h = 24;
+    const g = el("g", {transform:`translate(${midX} ${midY})`});
+    g.appendChild(el("rect",{x:-w/2,y:-h/2,width:w,height:h,rx:6,fill:"rgba(36,29,47,.85)",stroke:"#fff","stroke-width":"1.5"}));
+    const t = el("text",{x:0,y:0,fill:"#fff","font-size":"12","font-weight":"bold","text-anchor":"middle","dominant-baseline":"middle"});
+    t.textContent = r.text;
+    g.appendChild(t);
+    svg.appendChild(g);
+  });
+
+  backupNodes.forEach(n=>{
+    const g = el("g",{transform:`translate(${n.x} ${n.y})`,class:"backup-pin"});
+    g.setAttribute("data-tip", `${n.time} ${n.name}：${n.tip}`);
+    
+    g.appendChild(el("path",{class:"pin-shape",d:"M0,-18 C-10,-18 -19,-9 -19,1 C-19,16 0,30 0,30 C0,30 19,16 19,1 C19,-9 10,-18 0,-18Z",fill:"#ffb74d",stroke:"#241d2f","stroke-width":"2.5"}));
+    g.appendChild(el("circle",{class:"pin-dot",cx:0,cy:1,r:5,fill:"#fff",stroke:"#241d2f","stroke-width":"2"}));
+    
+    const labelW = Math.max(80, n.name.length*15+16);
+    g.appendChild(el("rect",{x:-labelW/2,y:26,width:labelW,height:26,rx:10,fill:"#fff3e0",stroke:"#241d2f","stroke-width":"2"}));
+    txt(g, n.name, 0, 39, {"font-size":"13","font-weight":"900","text-anchor":"middle","dominant-baseline":"middle"});
+    
+    const timeLabel = el("g",{transform:"translate(0 -30)"});
+    timeLabel.appendChild(el("rect",{x:-28,y:-12,width:56,height:22,rx:8,fill:"#ff9800",stroke:"#fff","stroke-width":"1.5"}));
+    txt(timeLabel, n.time, 0, 1, {"fill":"#fff","font-size":"12","font-weight":"900","text-anchor":"middle","dominant-baseline":"middle"});
+    g.appendChild(timeLabel);
+    
+    g.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showBackupDetails(n);
+      document.querySelectorAll('.backup-pin').forEach(p=>p.classList.remove('active-backup-pin'));
+      g.classList.add('active-backup-pin');
+    });
+    
+    svg.appendChild(g);
+  });
+
+  container.appendChild(svg);
+}
+
+function showBackupDetails(node) {
+  const card = document.getElementById('detailsCard');
+  document.getElementById('dcTitle').textContent = `${node.time} ${node.name}`;
+  let html = `<p class="dc-tip">${node.tip}</p>`;
+  if (node.details) {
+    if (node.details.intro) html += `<p><strong>📖 简介：</strong>${node.details.intro}</p>`;
+    if (node.details.photo) html += `<p><strong>📸 出片点：</strong>${node.details.photo}</p>`;
+    if (node.details.secret) html += `<p><strong>🤫 人少机位：</strong>${node.details.secret}</p>`;
+    if (node.details.pose) html += `<p><strong>💃 拍照灵感：</strong>${node.details.pose}</p>`;
+    if (node.details.must) html += `<p><strong>⭐ 必点/必做：</strong>${node.details.must}</p>`;
+    if (node.details.backup1) {
+      const b1 = node.details.backup1.split("|");
+      html += `<p><strong>🔄 备选方案1：</strong>${b1[0]}<br><span style="font-size:12px;color:#888;">📍 距离：${b1[1]} | 🗺️ 饭后：${b1[2]||"继续原行程"}</span></p>`;
+    }
+  }
+  document.getElementById('dcContent').innerHTML = html;
+  card.classList.remove('hidden');
+}
+
+// =====================
+
+function renderTimeline(dayId="all"){
+  const selected=dayId==="all"?days:days.filter(d=>d.id===dayId);
+  panelTitle.textContent=dayId==="all"?"全部行程":selected[0].name+" 行程";
+  
+  if(dayId==="all"){
+    panelWeather.style.display="none";
+    panelHint.innerHTML="完整版路线，点击节点可看备注。Day 4 主图按 Z308 方案显示，K1622 备选见下方卡片。";
+  } else {
+    panelWeather.style.display="block";
+    panelWeather.textContent = selected[0].weather;
+    panelHint.innerHTML=selected[0].hint;
+  }
+  
+  timeline.innerHTML="";
+  selected.forEach(d=>d.nodes.forEach(n=>{
+    const div=document.createElement("div");div.className="item";div.dataset.day=d.id;
+    div.innerHTML=`<div class="time">${n[0]}</div><div><strong>${n[1]}</strong><p>${n[5]}</p><span class="tag">${d.name}</span></div>`;
+    timeline.appendChild(div);
+  }));
+}
+
+function filter(dayId){
+  document.querySelectorAll(".controls button[data-day]").forEach(b=>b.classList.toggle("active",b.dataset.day===dayId));
+  document.querySelectorAll(".route,.route-base,.pin,.note,.day-title,.food-note").forEach(n=>{
+    const show=dayId==="all"||n.classList.contains(dayId);
+    n.classList.toggle("dim",!show);
+  });
+  renderTimeline(dayId);
+}
+
 document.querySelectorAll(".controls button[data-day]").forEach(b=>b.addEventListener("click",()=>filter(b.dataset.day)));
-let cursor=-1,flat=days.flatMap(d=>d.nodes.map(n=>({day:d.id,node:n})));document.getElementById("nextStop").addEventListener("click",()=>{cursor=(cursor+1)%flat.length;filter(flat[cursor].day);document.querySelectorAll(".pin").forEach(p=>p.style.filter="");const match=[...document.querySelectorAll(`.pin.${flat[cursor].day}`)].find(p=>p.getAttribute("data-tip").includes(flat[cursor].node[1]));if(match){match.style.filter="drop-shadow(0 0 12px #ffcc33)";}});
-const cl=document.getElementById("checklist");checklist.forEach((c,i)=>{const id="ck"+i,checked=localStorage.getItem(id)==="1";const label=document.createElement("label");label.innerHTML=`<input type="checkbox" ${checked?"checked":""}> <span>${c}</span>`;label.querySelector("input").addEventListener("change",e=>localStorage.setItem(id,e.target.checked?"1":"0"));cl.appendChild(label)});
-const tooltip=document.getElementById("tooltip");function show(e){tooltip.textContent=e.currentTarget.dataset.tip;tooltip.style.left=e.clientX+"px";tooltip.style.top=e.clientY+"px";tooltip.style.opacity=1}function move(e){tooltip.style.left=e.clientX+"px";tooltip.style.top=e.clientY+"px"}function hide(){tooltip.style.opacity=0}document.querySelectorAll(".pin").forEach(p=>{p.addEventListener("mouseenter",show);p.addEventListener("mousemove",move);p.addEventListener("mouseleave",hide);p.addEventListener("touchstart",e=>{const t=e.touches[0];show({currentTarget:p,clientX:t.clientX,clientY:t.clientY})},{passive:true})});document.getElementById("printBtn").addEventListener("click",()=>window.print());renderTimeline();
+
+let cursor=-1,flat=days.flatMap(d=>d.nodes.map(n=>({day:d.id,node:n})));
+
+document.getElementById("nextStop").addEventListener("click",()=>{
+  cursor=(cursor+1)%flat.length;
+  filter(flat[cursor].day);
+  document.querySelectorAll(".pin").forEach(p=>p.classList.remove("active-pin"));
+  const match=[...document.querySelectorAll(`.pin.${flat[cursor].day}`)].find(p=>p.getAttribute("data-tip").includes(flat[cursor].node[1]));
+  if(match){
+    match.classList.add("active-pin");
+    match.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+  showDetails(flat[cursor].node);
+});
+
+function renderChecklist(){
+  const cl=document.getElementById("checklist");
+  if(!cl) return;
+  cl.innerHTML="";
+  try{
+    checklist.forEach((c,i)=>{
+      const id="ck"+i,checked=localStorage.getItem(id)==="1";
+      const label=document.createElement("label");
+      label.innerHTML=`<input type="checkbox" ${checked?"checked":""}> <span>${c}</span>`;
+      label.querySelector("input").addEventListener("change",e=>localStorage.setItem(id,e.target.checked?"1":"0"));
+      cl.appendChild(label);
+    });
+  }catch(e){
+    cl.innerHTML=checklist.map((c,i)=>`<label><input type="checkbox"> <span>${c}</span></label>`).join('');
+  }
+}
+
+const tooltip=document.getElementById("tooltip");
+function show(e){tooltip.textContent=e.currentTarget.dataset.tip;tooltip.style.left=e.clientX+"px";tooltip.style.top=e.clientY+"px";tooltip.style.opacity=1}
+function move(e){tooltip.style.left=e.clientX+"px";tooltip.style.top=e.clientY+"px"}
+function hide(){tooltip.style.opacity=0}
+
+document.querySelectorAll(".pin").forEach(p=>{
+  p.addEventListener("mouseenter",show);p.addEventListener("mousemove",move);p.addEventListener("mouseleave",hide);
+  p.addEventListener("touchstart",e=>{const t=e.touches[0];show({currentTarget:p,clientX:t.clientX,clientY:t.clientY})},{passive:true});
+});
+
+document.getElementById("printBtn").addEventListener("click",()=>window.print());
+
+function showDetails(node) {
+  const [time, name, x, y, type, tip, details] = node;
+  const card = document.getElementById('detailsCard');
+  document.getElementById('dcTitle').textContent = `${time} ${name}`;
+  let html = `<p class="dc-tip">${tip}</p>`;
+  if (details) {
+    if (details.intro) html += `<p><strong>📖 简介：</strong>${details.intro}</p>`;
+    if (details.photo) html += `<p><strong>📸 出片点：</strong>${details.photo}</p>`;
+    if (details.secret) html += `<p><strong>🤫 人少机位：</strong>${details.secret}</p>`;
+    if (details.pose) html += `<p><strong>💃 拍照灵感：</strong>${details.pose}</p>`;
+    if (details.food) html += `<p><strong>🍡 顺路美食：</strong>${details.food}</p>`;
+    if (details.must) html += `<p><strong>⭐ 必点美食：</strong>${details.must}</p>`;
+    if (details.backup1) {
+      const b1 = details.backup1.split("|");
+      html += `<p><strong>🔄 备选方案1：</strong>${b1[0]}<br><span style="font-size:12px;color:#888;">🍽️ 推荐：${b1[1]||"招牌菜"} | 📍 距离：${b1[2]} | 🗺️ 饭后：${b1[3]||"继续原行程"}</span></p>`;
+    }
+    if (details.backup2) {
+      const b2 = details.backup2.split("|");
+      html += `<p><strong>🔄 备选方案2：</strong>${b2[0]}<br><span style="font-size:12px;color:#888;">🍽️ 推荐：${b2[1]||"招牌菜"} | 📍 距离：${b2[2]} | 🗺️ 饭后：${b2[3]||"继续原行程"}</span></p>`;
+    }
+  }
+  document.getElementById('dcContent').innerHTML = html;
+  card.classList.remove('hidden');
+}
+
+function showDayOverview(day) {
+  const card = document.getElementById('detailsCard');
+  document.getElementById('dcTitle').textContent = `${day.title[0]} 行程概览`;
+  let html = `<p class="dc-weather">${day.weather}</p>`;
+  html += `<p class="dc-tip">${day.hint}</p>`;
+  html += `<p style="font-size:13px; color:#888;">点击地图上的具体节点，可查看拍照机位和美食详情。</p>`;
+  document.getElementById('dcContent').innerHTML = html;
+  card.classList.remove('hidden');
+}
+
+function showFoodDetails(foodText) {
+  const card = document.getElementById('detailsCard');
+  document.getElementById('dcTitle').textContent = `🍡 沿途美食打卡`;
+  let html = `<p><strong>美食清单：</strong>${foodText}</p>`;
+  html += `<p class="dc-tip">这些是路线沿途顺路可以打卡的小吃，不占用正餐时间，边走边吃！</p>`;
+  document.getElementById('dcContent').innerHTML = html;
+  card.classList.remove('hidden');
+}
+
+document.getElementById('svg').addEventListener('click', (e) => {
+  if (e.target.tagName === 'svg' || e.target.tagName === 'rect') {
+    document.getElementById('detailsCard').classList.add('hidden');
+    document.querySelectorAll('.pin').forEach(p=>p.classList.remove("active-pin"));
+    document.querySelectorAll('.backup-pin').forEach(p=>p.classList.remove("active-backup-pin"));
+  }
+});
+
+// 初始化
+renderTimeline();
+renderChecklist();
+renderBackupMap();
 </script>
 </body>
 </html>
